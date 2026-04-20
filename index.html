@@ -19,7 +19,6 @@
             </nav>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -27,7 +26,6 @@
             <p>Authentische griechische Küche in Echzell</p>
         </div>
     </section>
-
     <!-- About Section -->
     <section class="about">
         <div class="container">
@@ -39,7 +37,6 @@
             </p>
         </div>
     </section>
-
     <!-- Menu Section -->
     <section class="menu" id="menu">
         <div class="container">
@@ -90,7 +87,6 @@
             </div>
         </div>
     </section>
-
     <!-- Info Section -->
     <section class="info" id="info">
         <div class="container">
@@ -108,19 +104,72 @@
                     <h3>Adresse</h3>
                     <p>
                         Restaurant Akropolis<br>
-                        [Straße und Hausnummer]<br>
-                        64732 Echzell<br>
-                        Hessen, Deutschland
+                        Bisseserstr. 131<br>
+                        61209 Echzell<br>
+                        Hessen, Deutschland<br><br>
+                        <strong>Telefon:</strong> 06008 918555
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer id="kontakt">
         <p>&copy; 2026 Restaurant Akropolis Echzell. Alle Rechte vorbehalten.</p>
-        <p>Datenschutz | Impressum | AGB</p>
+        <div class="footer-links">
+            <a href="#" onclick="openModal('datenschutzModal'); return false;">Datenschutz</a>
+            <a href="#" onclick="openModal('impressumModal'); return false;">Impressum</a>
+            <a href="#" onclick="openModal('kontaktModal'); return false;">Kontakt</a>
+        </div>
     </footer>
+
+    <!-- Modals -->
+    <!-- Datenschutz Modal -->
+    <div id="datenschutzModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('datenschutzModal')">&times;</span>
+            <h2>Datenschutz</h2>
+            <p>🔨 Diese Seite wird derzeit noch überarbeitet.</p>
+            <p>Die Datenschutzerklärung wird in Kürze verfügbar sein. Vielen Dank für Ihr Verständnis!</p>
+        </div>
+    </div>
+
+    <!-- Impressum Modal -->
+    <div id="impressumModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('impressumModal')">&times;</span>
+            <h2>Impressum</h2>
+            <p>🔨 Diese Seite wird derzeit noch überarbeitet.</p>
+            <p>Das Impressum wird in Kürze verfügbar sein. Vielen Dank für Ihr Verständnis!</p>
+        </div>
+    </div>
+
+    <!-- Kontakt Modal -->
+    <div id="kontaktModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kontaktModal')">&times;</span>
+            <h2>Kontakt</h2>
+            <p>🔨 Diese Seite wird derzeit noch überarbeitet.</p>
+            <p>Das Kontaktformular wird in Kürze verfügbar sein. Vielen Dank für Ihr Verständnis!</p>
+            <p><strong>Rufen Sie uns an:</strong> 06008 918555</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Schließt Modal wenn außerhalb geklickt wird
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
