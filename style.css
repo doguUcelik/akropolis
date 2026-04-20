@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #003d82 0%, #005ba3 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 61, 130, 0.15);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #003d82 0%, #005ba3 100%);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 5px solid #f4a460;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-family: 'Lora', serif;
+}
+
+.cta-button {
+    background-color: #f4a460;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background-color: #e8985a;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* About Section */
+.about {
+    background: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #003d82;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Menu Section */
+.menu {
+    background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+    padding: 4rem 2rem;
+}
+
+.menu h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #003d82;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 61, 130, 0.1);
+    border-top: 4px solid #f4a460;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 61, 130, 0.15);
+}
+
+.menu-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.3rem;
+    color: #003d82;
+    margin-bottom: 0.5rem;
+}
+
+.menu-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Info Section */
+.info {
+    background: white;
+    padding: 4rem 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.info-box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.info-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #003d82;
+    margin-bottom: 1rem;
+}
+
+.info-box p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #003d82;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about h2, .menu h2 {
+        font-size: 2rem;
+    }
+}
